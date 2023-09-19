@@ -1,0 +1,8 @@
+.logo {
+  display: flex;
+
+  svg {
+    width: clamp(145px, 11.042vw, 212px);
+    height: clamp(40px, 2.813vw, 54px);
+  }
+}

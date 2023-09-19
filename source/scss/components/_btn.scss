@@ -1,20 +1,15 @@
 .btn {
-  height: 65px;
-  height: clamp(55px, 3.963vw, 65px);
-  width: 100%;
-  position: relative;
+  width: fit-content;
+  padding: 10px clamp(18px, 1.875vw, 36px) 12px clamp(18px, 1.563vw, 30px);
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--color-blue);
-  border-radius: 100px;
+  background-color: var(--color-purple);
+  border-radius: 10px;
   font-family: var(--font-family-inter);
-  font-size: 22px;
-  line-height: 130%;
-  font-size: clamp(17px, 1.341vw, 22px);
-  line-height: clamp(17px, 1.341vw, 22px);
-  font-weight: 700;
+  font-size: clamp(15px, 1.094vw, 21px);
+  line-height: clamp(19px, 1.458vw, 28px);
+  font-weight: 500;
   color: var(--color-white);
-  text-transform: uppercase;
   transition: all 0.3s ease;
 }

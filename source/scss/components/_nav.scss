@@ -1,0 +1,24 @@
+.nav {
+  &__items {
+    display: flex;
+    align-items: center;
+    grid-gap: clamp(15px, 3.438vw, 66px);
+
+    @media (max-width: 1240px) {
+      grid-gap: 15px;
+    }
+  }
+
+  &__link {
+    font-size: clamp(15px, 1.094vw, 21px);
+    line-height: clamp(19px, 1.458vw, 28px);
+    font-weight: 500;
+    color: var(--color-white);
+    transition: all 0.4s ease;
+
+    &:hover,
+    &.active {
+      color: var(--color-purple);
+    }
+  }
+}

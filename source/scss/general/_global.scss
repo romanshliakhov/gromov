@@ -159,10 +159,13 @@ input[type="number"] {
 
 .container {
   position: relative;
-  max-width: 1640px;
   width: 100%;
   margin: 0 auto;
-  padding: 0 clamp(10px, 3.125vw, 60px);
+  padding: 0 clamp(20px, 3.906vw, 75px);
+
+  @media (max-width: 1240px) {
+    padding: 0 20px;
+  }
 }
 
 .disable-scroll {
