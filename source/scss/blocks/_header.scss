@@ -1,0 +1,87 @@
+header {
+  padding: clamp(17px, 2.083vw, 30px) 0;
+  // background-color: red;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  grid-gap: clamp(20px, 2.419vw, 30px);
+
+  &__logo {
+    color: var(--color-blue);
+
+    svg {
+      width: clamp(100px, 14.097vw, 203px);
+      height: clamp(15px, 2.083vw, 30px);
+    }
+  }
+
+  &__inner {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    grid-gap: clamp(30px, 4.948vw, 95px);
+
+    @media (max-width: 1240px) {
+      grid-gap: clamp(15px, 2.083vw, 30px);
+    }
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    grid-gap: clamp(20px, 2.604vw, 50px);
+    transition: all 0.4s ease-in-out;
+    transition-delay: 0.3s;
+
+    a {
+      font-size: clamp(16px, 1.452vw, 18px);
+      line-height: clamp(16px, 1.452vw, 18px);
+      font-weight: 600;
+
+      @media (max-width: 992px) {
+        font-size: 24px;
+        line-height: 31px;
+        font-weight: 700;
+      }
+    }
+
+    @media (max-width: 992px) {
+      opacity: 0;
+      visibility: hidden;
+      flex-direction: column;
+      align-items: flex-start;
+      grid-gap: 40px;
+    }
+  }
+
+  &__panel {
+    display: flex;
+    align-items: center;
+    grid-gap: 15px;
+
+    svg {
+      width: clamp(18px, 3.125vw, 24px);
+      height: clamp(18px, 3.125vw, 24px);
+    }
+  }
+
+  &__contacts {
+    height: clamp(55px, 4.167vw, 60px);
+    max-width: 179px;
+    background-color: var(--color-green);
+    font-size: clamp(17px, 1.25vw, 18px);
+    line-height: clamp(17px, 1.25vw, 18px);
+    transition: all 0.4s ease-in-out;
+    transition-delay: 0.3s;
+
+    @media (max-width: 992px) {
+      max-width: 100%;
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+}

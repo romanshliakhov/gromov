@@ -1,0 +1,40 @@
+<div class="modal">
+  <div class="modal__container" data-animation="fade" data-speed="300" data-target="rating">
+    <div class="modal__wrapper">
+      <div class="modal__close">
+        <svg width='20' height='20'>
+          <use href='img/sprite/sprite.svg#close'></use>
+        </svg>
+      </div>
+
+      <div class="modal__ratings">
+        <h3 class="modal__rating-title">Add rating to Vbet</h3>
+
+        <form class="modal__rating rating rating_set" action="#">
+          <div class="rating__info">
+            <div class="rating__results">
+              <div class="rating__body">
+                <div class="rating__active"></div>
+                <div class="rating__items">
+                  <input class="rating__item" type="radio" value="1" name="rating">
+                  <input class="rating__item" type="radio" value="2" name="rating">
+                  <input class="rating__item" type="radio" value="3" name="rating">
+                  <input class="rating__item" type="radio" value="4" name="rating">
+                  <input class="rating__item" type="radio" value="5" name="rating">
+                </div>
+              </div>
+
+              <div class="rating__summary"><span class="rating__value">0</span> of 5</div>
+            </div>
+          </div>
+
+          <div class="rating__form-bot">
+            <button class="rating__form btn" type="submit" disabled>Confirm</button>
+
+            <p class="rating__form-alert">Please, select your rating first</p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,25 @@
+.select {
+	position: relative;
+
+  svg {
+    transition: all 0.3s ease;
+  }
+
+  &.is-active {
+    .select__body {
+      position: absolute;
+      display: flex;
+      top: 0;
+      z-index: 10;
+    }
+
+    svg {
+      transform: scale(-1);
+    }
+  }
+
+  &__body {
+    display: none;
+    transition: all .3s ease;
+  }
+}
