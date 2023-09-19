@@ -1,0 +1,25 @@
+.counter {
+  display: flex;
+  align-items: center;
+  grid-gap: 100px;
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    grid-gap: 28px;
+  }
+
+  &__numbers {
+    font-size: 44px;
+    line-height: 57px;
+  }
+
+  &__descr {
+    font-size: 17px;
+    line-height: 22px;
+    color: var(--color-grey);
+    text-align: center;
+  }
+}

@@ -1,4 +1,5 @@
 import './components/modals.js';
+import './components/counter.js';
 
 // import './components/accordions.js';
 // import './components/sliders.js';

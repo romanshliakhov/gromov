@@ -1,7 +1,29 @@
 .hero {
-  padding: 85px 0 150px;
+  padding: 85px 0 100px;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-image: url('../img/hero.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    z-index: -1;
+  }
 
   &__wrapp {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__top {
+    margin-bottom: 215px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -63,6 +85,24 @@
       font-size: 18px;
       line-height: 25px;
       font-weight: 500;
+    }
+  }
+
+  &__counter {
+    margin-bottom: 100px;
+  }
+
+  &__subtitle {
+    max-width: 1370px;
+    width: 100%;
+    text-align: center;
+
+    span {
+      background: radial-gradient(285.17% 43.4% at 97.01% -5.43%, #7E51FF 0%, #000 100%);
+      background: radial-gradient(494.66% 38.46% at 25.77% 45.72%, #7E51FF 0%, #000 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
   }
 }
