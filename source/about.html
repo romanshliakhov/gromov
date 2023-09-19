@@ -7,9 +7,81 @@
     @include('partials/header.html',{})
 
     <main class="main">
-      <div class="container">
-        main
-      </div>
+      <section class="about">
+        <div class="about__hero">
+          <div class="about__hero-bg">
+            <picture>
+              <source type='image/webp' srcset='img/about.webp'>
+              <img width='1920' height='886' src='img/about.png' alt='about'>
+            </picture>
+          </div>
+
+          <div class="container">
+            <div class="about__wrapp">
+              <ul class="about__top">
+                <li>
+                  <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M19.3335 11H13.3335V5H11.3335V11H5.3335V13H11.3335V19H13.3335V13H19.3335V11Z" fill="#994FE4"/>
+                  </svg>
+                  <span>#1 Сайт по поиску, продаже и обучению работе на рынке</span>
+                </li>
+                <li>
+                  <svg width="33" height="53" viewBox="0 0 33 53" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M5.49604 17.4419C4.99268 18.1591 4.99268 20.2908 4.99268 24.5543V26.6539C4.99268 34.1712 10.6446 37.8194 14.1908 39.3684C15.1527 39.7886 15.6336 39.9987 16.9927 39.9987C18.3517 39.9987 18.8327 39.7886 19.7945 39.3684C23.3407 37.8194 28.9927 34.1712 28.9927 26.6539V24.5543C28.9927 20.2908 28.9927 18.1591 28.4893 17.4419C27.986 16.7248 25.9816 16.0386 21.9728 14.6664L21.2091 14.405C19.1193 13.6897 18.0745 13.332 16.9927 13.332C15.9108 13.332 14.866 13.6897 12.7763 14.405L12.0126 14.6664C8.00377 16.0386 5.99938 16.7248 5.49604 17.4419ZM21.072 24.6647C21.4397 24.2527 21.404 23.6206 20.992 23.2528C20.58 22.8849 19.9479 22.9207 19.58 23.3327L15.5641 27.8306L14.4053 26.5327C14.0374 26.1207 13.4053 26.085 12.9933 26.4527C12.5814 26.8206 12.5456 27.4527 12.9134 27.8647L14.8181 29.998C15.0079 30.2106 15.2792 30.332 15.5641 30.332C15.8489 30.332 16.1203 30.2106 16.31 29.998L21.072 24.6647Z" fill="#9A4FE4"/>
+                  </svg>
+                  <span>Надежность. Репутация проверенная годами работы</span>
+                </li>
+              </ul>
+
+              <h1 class="about__title">Ищи, покупай, продавай каналы с Gromov Work</h1>
+
+              <p class="about__descr">💰Десятки людей каждый день присылают каналы и мы их. Этот рынок невероятного размера и найти крутой канал по нашим критериям достаточно легко! </p>
+
+              <ul class="about__details">
+                <li class="about__detail">
+                  <span class="about__detail-heading">Гайд по поиску каналов</span>
+                  <p class="about__detail-descr">Обучение поиску</p>
+                  <a class="about__detail-btn" href="#">
+                    <span>ПЕРЕЙТИ</span>
+
+                    <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M6.10986 18L18.1099 6M18.1099 6H9.10986M18.1099 6V15" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </a>
+                </li>
+
+                <li class="about__detail">
+                  <span class="about__detail-heading">Продать свой канал</span>
+                  <p class="about__detail-descr">Форма отправки канала</p>
+                  <a class="about__detail-btn" href="#">
+                    <span>ПЕРЕЙТИ</span>
+
+                    <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M6.10986 18L18.1099 6M18.1099 6H9.10986M18.1099 6V15" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </a>
+                </li>
+
+                <li class="about__detail">
+                  <span class="about__detail-heading">Купить у нас канал</span>
+                  <p class="about__detail-descr">Просмотреть ассортимент каналов в наличии.</p>
+                  <a class="about__detail-btn" href="#">
+                    <span>ПЕРЕЙТИ</span>
+
+                    <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M6.10986 18L18.1099 6M18.1099 6H9.10986M18.1099 6V15" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+
+      </section>
+
+
     </main>
 
     @include('partials/footer.html',{})
