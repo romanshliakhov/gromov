@@ -1,0 +1,53 @@
+.work {
+  position: relative;
+  padding: 133px 0 223px;
+  // margin-bottom: -120px;
+
+  &__bg {
+    position: absolute;
+    inset: 0;
+
+    picture,
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: right;
+    }
+  }
+
+  &__wrapp {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding-left: 65px;
+  }
+
+  &__title {
+    margin-bottom: 42px;
+    max-width: 1067px;
+    width: 100%;
+    color: var(--color-white);
+
+    .strikethrough {
+      color: rgba(255, 255, 255, 0.50);
+      text-decoration: line-through;
+    }
+
+    .yellow {
+      padding-right: 15px;
+      border-radius: 5px;
+      background: #D9E44F;
+      color: var(--color-black);
+    }
+  }
+
+  &__descr {
+    display: block;
+    max-width: 555px;
+    margin-bottom: 34px;
+    font-size: 21px;
+    line-height: 28px;
+    color: var(--color-white);
+  }
+}

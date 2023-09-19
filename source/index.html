@@ -7,9 +7,56 @@
     @include('partials/header.html',{})
 
     <main class="main">
-      <div class="container">
-        main
-      </div>
+      <section class="hero">
+        <div class="container">
+          <div class="hero__wrapp">
+            <h1>Продавай, покупай, ищи каналы с Gromov Work</h1>
+
+            <p>💰Десятки людей каждый день присылают каналы и мы их покупаем. Этот рынок невероятного размера и найти крутой канал по нашим критериям достаточно легко, а еще легче продать свой канал нам по выгодной цене! </p>
+
+            <div class="hero__nav">
+              <ul class="hero__nav-links">
+                <li>
+                  <a href="/">Главная</a>
+                </li>
+                <li>
+                  <a href="#">Продать канал</a>
+                </li>
+                <li>
+                  <a href="#">Купить канал</a>
+                </li>
+                <li>
+                  <a href="/guide.html">Заработать</a>
+                </li>
+                <li>
+                  <a href="/about.html">О нас</a>
+                </li>
+              </ul>
+
+              <button class="btn" data-path="contacts">Связаться с нами</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="work">
+        <div class="work__bg">
+          <picture>
+            <source type='image/webp' srcset='img/work-bg.webp'>
+            <img width='1920' height='845' src='img/work-bg.png' alt='work-bg'>
+          </picture>
+        </div>
+
+        <div class="container">
+          <div class="work__wrapp">
+            <h2 class="work__title">Работа без вложений. Отыщи свой первый <span class="strikethrough">канал</span> <i class="yellow">1.000.000₽</i></h2>
+
+            <p class="work__descr">Обновленный гайд по поиску каналов! Никогда за всю историю рынка не было настолько подробной и детальной инструкции к работе с поиском каналов! </p>
+
+            <a class="work__btn btn" href="#">Просмотреть гайд по поиску</a>
+          </div>
+        </div>
+      </section>
     </main>
 
     @include('partials/footer.html',{})
