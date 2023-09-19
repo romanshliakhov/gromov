@@ -157,17 +157,18 @@ input[type="number"] {
   flex-direction: column;
   width: 100%;
 
-  // &::after {
-  //   content: "";
-  //   position: absolute;
-  //   height: 100%;
-  //   width: 100%;
-  //   background-image: url('../img/main.png');
-  //   background-repeat: no-repeat;
-  //   background-size: cover;
-  //   background-position: top;
-  //   z-index: -1;
-  // }
+  &::after {
+    content: "";
+    position: absolute;
+    top: -95px;
+    height: 441px;
+    width: 279px;
+    background-image: var(--main-text);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    // transform: rotate(-163.523deg);
+    z-index: -1;
+  }
 }
 
 .container {
