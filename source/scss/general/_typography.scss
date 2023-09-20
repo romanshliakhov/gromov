@@ -1,15 +1,16 @@
 h1 {
   font-size: 100px;
-  line-height: 106px;
+  font-size: clamp(70px, 5.208vw, 100px);
+  line-height: clamp(80px, 5.521vw, 106px);
+  letter-spacing: clamp(-2px, -0.45vw, -8.64px);
   font-weight: 400;
-  letter-spacing: -8.64px;
 }
 
 h2 {
-  font-size: 70px;
-  line-height: 80px;
+  font-size: clamp(26px, 3.646vw, 70px);
+  line-height: clamp(32px, 4.167vw, 80px);
   font-weight: 400;
-  letter-spacing: -5.6px;
+  letter-spacing: clamp(-2.6px, -0.292vw, -5.6px);
 }
 
 

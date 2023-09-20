@@ -1,5 +1,5 @@
   .header {
-    padding: 37px 0;
+    padding: clamp(20px, 3.613vw, 37px) 0;
     background-color: var(--color-black);
 
     .container {
@@ -7,9 +7,42 @@
       align-items: center;
       justify-content: space-between;
       grid-gap: clamp(15px, 1.389vw, 20px);
+
+      @media (max-width: 1024px) {
+        grid-gap: 50px;
+      }
+    }
+
+    &__logo {
+      position: relative;
+      z-index: 30;
+
+      svg {
+        width: clamp(145px, 11.042vw, 212px);
+        height: clamp(40px, 2.813vw, 54px);
+
+        @media (max-width: 1024px) {
+          width: clamp(170px, 20.703vw, 212px);
+          height: clamp(40px, 5.273vw, 54px);
+        }
+      }
+    }
+
+    &__nav {
+      @media (max-width: 1024px) {
+        display: none;
+      }
     }
 
     &__btn {
       background-color: var(--color-purple);
+
+      @media (max-width: 1024px) {
+        margin-left: auto;
+      }
+
+      @media (max-width: 576px) {
+        display: none;
+      }
     }
   }

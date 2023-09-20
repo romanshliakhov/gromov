@@ -1,24 +1,30 @@
 .counter {
   display: flex;
   align-items: center;
-  grid-gap: 100px;
+  grid-gap: clamp(30px, 9.766vw, 100px);
+
+  @media (max-width: 576px) {
+    flex-direction: column;
+    justify-content: center;
+    grid-gap: 15px;
+  }
 
   &__item {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    grid-gap: 28px;
+    grid-gap: clamp(10px, 1.458vw, 28px);
   }
 
   &__numbers {
-    font-size: 44px;
-    line-height: 57px;
+    font-size: clamp(30px, 4.297vw, 44px);
+    line-height: clamp(38px, 4.297vw, 44px);
   }
 
   &__descr {
-    font-size: 17px;
-    line-height: 22px;
+    font-size: clamp(14px, 1.66vw, 17px);
+    line-height: clamp(18px, 2.148vw, 22px);
     color: var(--color-grey);
     text-align: center;
   }

@@ -1,5 +1,5 @@
 .hero {
-  padding: 85px 0 100px;
+  padding: clamp(40px, 11.068vw, 85px) 0 clamp(60px, 13.021vw, 100px);
   position: relative;
   flex-grow: 1;
 
@@ -24,27 +24,32 @@
   }
 
   &__top {
-    margin-bottom: 215px;
+    margin-bottom: clamp(120px, 11.198vw, 215px);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     grid-gap: 17px;
 
+    @media (max-width: 1024px) {
+      margin-bottom: clamp(40px, 15.625vw, 120px);
+    }
+
     h1 {
       max-width: 1360px;
       font-family: var(--font-family-gilroy);
-      font-size: 135px;
-      line-height: 146px;
+      font-size: clamp(38px, 7.031vw, 135px);
+      line-height: clamp(44px, 7.604vw, 146px);
+      letter-spacing: clamp(-2px, -0.573vw, -11px);
       font-weight: 400;
-      letter-spacing: -10.874px;
+
       text-align: center;
     }
 
     p {
       max-width: 1015px;
-      font-size: 24px;
-      line-height: 36px;
+      font-size: clamp(18px, 1.25vw, 24px);
+      line-height: clamp(22px, 1.875vw, 36px);
       color: #14104A;
       text-align: center;
     }
@@ -55,10 +60,18 @@
     width: 100%;
     display: flex;
     align-items: center;
-    grid-gap: 40px;
-    padding: 17px 19px 16px 34px;
-    border-radius: 26px;
+    grid-gap: clamp(30px, 2.083vw, 40px);
+    padding: clamp(10px, 1.66vw, 17px) clamp(10px, 1.855vw, 19px) clamp(10px, 1.563vw, 16px) clamp(10px, 3.32vw, 34px);
+    border-radius: clamp(10px, 1.806vw, 26px);
     background-color: var(--color-white);
+
+    @media (max-width: 1024px) {
+      padding: 10px;
+    }
+
+    @media (max-width: 767px) {
+      display: none;
+    }
 
     ul {
       max-width: 908px;
@@ -66,14 +79,20 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      grid-gap: 40px;
+      grid-gap: clamp(15px, 2.083vw, 40px);
 
       a {
-        font-size: 26px;
-        line-height: 27px;
+        font-size: clamp(20px, 1.354vw, 26px);
+        line-height: clamp(24px, 1.406vw, 27px);
         font-weight: 400;
         color: #26272B;
         transition: all 0.4s ease;
+
+        @media (max-width: 1024px) {
+          font-size: clamp(16px, 1.953vw, 20px);
+          line-height: clamp(20px, 2.344vw, 24px);
+          font-weight: 700;
+        }
 
         &:hover {
           color: var(--color-purple);
@@ -82,15 +101,16 @@
     }
 
     button {
+      flex-shrink: 0;
       padding: 12px 16px 10px 12px;
-      font-size: 18px;
-      line-height: 25px;
+      font-size: clamp(16px, 0.417vw, 18px);
+      line-height: clamp(20px, 1.302vw, 25px);
       font-weight: 500;
     }
   }
 
   &__counter {
-    margin-bottom: 100px;
+    margin-bottom: clamp(40px, 13.021vw, 100px);
   }
 
   &__subtitle {

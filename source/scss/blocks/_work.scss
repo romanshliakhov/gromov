@@ -1,7 +1,11 @@
 .work {
   position: relative;
-  padding: 133px 0 223px;
-  margin-bottom: -70px;
+  padding: clamp(70px, 6.927vw, 133px) 0 clamp(100px, 12.135vw, 233px);
+  margin-bottom: clamp(-20px, -6.836vw, -70px);
+
+  @media (max-width: 767px) {
+    padding: clamp(40px, 9.115vw, 70px) 0 clamp(50px, 13.021vw, 100px);
+  }
 
   &__bg {
     position: absolute;
@@ -20,7 +24,16 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    padding-left: 65px;
+    padding-left: clamp(25px, 3.385vw, 65px);
+
+    @media (max-width: 992px) {
+      padding-left: 0;
+    }
+
+    @media (max-width: 767px) {
+      align-items: center;
+      text-align: center;
+    }
   }
 
   &__title {
@@ -46,8 +59,8 @@
     display: block;
     max-width: 555px;
     margin-bottom: 34px;
-    font-size: 21px;
-    line-height: 28px;
+    font-size: clamp(16px, 2.734vw, 21px);
+    line-height: clamp(20px, 3.646vw, 28px);
     color: var(--color-white);
   }
 }
