@@ -23,7 +23,7 @@
     width: 100%;
     margin-bottom: 54px;
     position: relative;
-    padding: 126px 0 115px;
+    padding: clamp(40px, 6.563vw, 126px) 0 clamp(60px, 5.99vw, 115px);
   }
 
   &__hero-bg {
@@ -41,17 +41,23 @@
   }
 
   &__top {
-    margin-bottom: 33px;
+    margin-bottom: clamp(20px, 1.719vw, 33px);
     display: flex;
     align-items: center;
-    grid-gap: 30px;
+    grid-gap: clamp(20px, 1.563vw, 30px);
+
+    @media (max-width: 1239px) {
+      flex-direction: column;
+      align-items: flex-start;
+      grid-gap: clamp(10px, 1.21vw, 15px);
+    }
 
     li {
       display: flex;
       align-items: center;
       grid-gap: 12px;
-      font-size: 21px;
-      line-height: 28px;
+      font-size: clamp(18px, 1.094vw, 21px);
+      line-height: clamp(22px, 1.458vw, 28px);
       font-weight: 500;
 
       svg {
@@ -68,17 +74,33 @@
 
   &__descr {
     display: block;
-    max-width: 980px;
+    max-width: clamp(840px, 51.042vw, 980px);
     width: 100%;
     margin-bottom: 42px;
-    font-size: 32px;
-    line-height: 48px;
+    font-size: clamp(24px, 1.667vw, 32px);
+    line-height: clamp(30px, 2.5vw, 48px);
+
+    @media (max-width: 767px) {
+      font-size: clamp(18px, 3.125vw, 24px);
+      line-height: clamp(22px, 3.906vw, 30px);
+    }
   }
 
   &__details {
     display: flex;
     align-items: center;
-    grid-gap: 60px;
+    grid-gap: clamp(40px, 3.125vw, 60px);
+
+    @media (max-width: 991px) {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      align-items: stretch;
+      grid-gap: 20px;
+    }
+
+    @media (max-width: 767px) {
+      grid-template-columns: 100%;
+    }
   }
 
   &__detail {
@@ -88,17 +110,18 @@
 
   &__detail-heading {
     display: block;
-    margin-bottom: 18px;
-    font-size: 24px;
-    line-height: 30px;
+    margin-bottom: clamp(15px, 0.938vw, 18px);
+    font-size: clamp(18px, 1.25vw, 24px);
+    line-height: clamp(22px, 1.563vw, 30px);
     font-weight: 500;
   }
 
   &__detail-descr {
+    flex-grow: 1;
     display: block;
     margin-bottom: 12px;
-    font-size: 18px;
-    line-height: 27px;
+    font-size: clamp(16px, 0.938vw, 18px);
+    line-height: clamp(20px, 1.406vw, 27px);
     color: rgba(0, 0, 0, 0.5);
   }
 
@@ -115,13 +138,13 @@
   }
 
   &__counter {
-    margin-bottom: 70px;
+    margin-bottom: clamp(40px, 3.646vw, 70px);
   }
 
   &__subtitle {
     max-width: 1370px;
     width: 100%;
-    margin-bottom: 105px;
+    margin-bottom: clamp(40px, 5.469vw, 105px);
     text-align: center;
 
     span {
@@ -137,28 +160,58 @@
     max-width: 1600px;
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(2, 490px) 1fr;
-    grid-gap: 30px;
-    margin-bottom: 105px;
+    grid-template-columns: repeat(2, 30%) 1fr;
+    grid-gap: clamp(10px, 1.563vw, 30px);
+    margin-bottom: clamp(40px, 5.469vw, 105px);
+
+    @media (max-width: 767px) {
+      grid-template-columns: 100%;
+    }
   }
 
   &__item {
     position: relative;
-    padding: 40px;
+    padding: clamp(30px, 2.083vw, 40px);
 
     &:first-child {
-      padding: 40px 26px;
+      padding: clamp(30px, 2.083vw, 40px) clamp(20px, 1.354vw, 26px);
       grid-row: span 2;
       height: initial;
+      text-align: center;
+
+      a {
+        margin: 0 auto;
+      }
+
+      p {
+        max-width: 100%;
+      }
+
+      @media (max-width: 767px) {
+        text-align: left;
+
+        a {
+          margin: 0;
+        }
+      }
     }
 
     &:nth-child(2) {
       grid-column: span 2;
-      height: 270px;
+      min-height: clamp(200px, 14.063vw, 270px);
+
+      @media (max-width: 767px) {
+        grid-column: 1;
+        min-height: initial;
+      }
     }
 
     &:nth-child(3) {
-      height: 286px;
+      min-height: clamp(200px, 14.896vw, 286px);
+
+      @media (max-width: 767px) {
+        min-height: initial;
+      }
     }
 
     &:nth-child(4) {
@@ -167,7 +220,12 @@
 
     &:last-child {
       grid-column: span 2;
-      height: 286px;
+      min-height: clamp(200px, 14.896vw, 286px);
+
+      @media (max-width: 767px) {
+        grid-column: 1;
+        min-height: initial;
+      }
     }
   }
 
@@ -193,8 +251,8 @@
   }
 
   &__item-link {
-    font-size: 40px;
-    line-height: 49px;
+    font-size: clamp(24px, 2.083vw, 40px);
+    line-height: clamp(30px, 2.552vw, 49px);
     font-weight: 600;
     color: var(--color-white);
     letter-spacing: -1.242px;
@@ -203,10 +261,15 @@
   &__item-descr {
     max-width: 390px;
     width: 100%;
-    font-size: 22px;
-    line-height: 33px;
+    font-size: clamp(16px, 1.146vw, 22px);
+    line-height: clamp(22px, 1.719vw, 33px);
     font-weight: 300;
     color: rgba(255, 255, 255, 0.70);
+
+    @media (max-width: 991px) {
+      color: var(--color-white);
+      text-shadow: 1px 1px 2px var(--color-white);
+    }
   }
 
   &__wrapp {
@@ -218,7 +281,11 @@
   &__soon {
     position: relative;
     width: 100%;
-    padding-bottom: 220px;
+    padding-bottom: clamp(80px, 11.458vw, 220px);
+
+    @media (max-width: 768px) {
+      padding-bottom: clamp(50px, 10.417vw, 80px);
+    }
 
     &::before {
       content: '';
@@ -228,22 +295,31 @@
       background-size: cover;
       background-repeat: no-repeat;
       width: 100%;
-      height: 262px;
+      height: clamp(60px, 13.646vw, 262px);
       bottom: 0;
-    }
 
-    .container {
-      max-width: 1750px;
+      @media (max-width: 768px) {
+        height: 60px;
+      }
     }
   }
 
   &__soon-wrapp {
-    display: flex;
-    align-items: stretch;
+    display: grid;
+    grid-template-columns: 43% 1fr;
+    grid-gap: clamp(10px, 2.93vw, 30px);
+    padding-left: clamp(20px, 3.906vw, 75px);
+
+    @media (max-width: 1440px) {
+      padding-left: 0;
+    }
+
+    @media (max-width: 576px) {
+      grid-template-columns: 100%;
+    }
   }
 
   &__soon-title {
-    max-width: 687px;
     color: rgba(0, 0, 0, 0.25);
 
     span {
@@ -254,7 +330,17 @@
 
   &__soon-image {
     display: flex;
-    margin-left: -300px;
+    margin-left: clamp(-200px, -15.625vw, -300px);
+    margin-right: clamp(-60px, -3.906vw, -75px);
+
+    @media (max-width: 1440px) {
+      margin-right: clamp(-45px, -5.859vw, -70px);
+    }
+
+    @media (max-width: 768px) {
+      margin-left: 0;
+      margin-right: -25px;
+    }
 
     picture,
     img {
