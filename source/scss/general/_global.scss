@@ -160,14 +160,16 @@ input[type="number"] {
   &::after {
     content: "";
     position: absolute;
+    left: -120px;
     top: -95px;
-    height: 441px;
-    width: 279px;
-    background-image: var(--main-text);
+    height: clamp(230px, 18.49vw, 355px);
+    width: clamp(275px, 18.073vw, 347px);
+    background-image: url('../img/text.svg');
     background-repeat: no-repeat;
+    background-size: cover;
     background-size: 100% 100%;
-    // transform: rotate(-163.523deg);
     z-index: -1;
+    animation: 20s linear infinite running rotate;
   }
 }
 
@@ -176,6 +178,7 @@ input[type="number"] {
   width: 100%;
   margin: 0 auto;
   padding: 0 clamp(20px, 3.906vw, 75px);
+  max-width: 1920px;
 
   @media (max-width: 1240px) {
     padding: 0 20px;
@@ -189,6 +192,15 @@ input[type="number"] {
   left: 0;
   top: 0;
   width: 100%;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 

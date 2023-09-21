@@ -51,6 +51,21 @@
     align-items: center;
     grid-gap: clamp(30px, 2.188vw, 42px);
 
+    &::after {
+      content: "";
+      position: absolute;
+      right: -3%;
+      bottom: -10%;
+      width: clamp(230px, 16.823vw, 323px);
+      height: clamp(230px, 16.823vw, 323px);
+      background-image: url('../img/text-opacity.svg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      z-index: -1;
+      animation: 20s linear infinite running rotate;
+    }
+
     @media (max-width: 991px) {
       width: 100vw;
 
@@ -204,6 +219,12 @@
     line-height: clamp(22px, 1.25vw, 24px);
     font-weight: 500;
     color: var(--color-white);
+    transition: all 0.4s ease;
+
+    &:hover {
+      background-color: var(--color-white);
+      color: var(--color-purple);
+    }
   }
 
   &__manager {
@@ -221,6 +242,12 @@
     font-weight: 500;
     color: var(--color-purple);
     text-align: center;
+    transition: all 0.4s ease;
+
+    &:hover {
+      background-color: var(--color-purple);
+      color: var(--color-white);
+    }
   }
 
   &__text {

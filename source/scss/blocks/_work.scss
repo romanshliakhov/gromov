@@ -62,5 +62,6 @@
     font-size: clamp(16px, 2.734vw, 21px);
     line-height: clamp(20px, 3.646vw, 28px);
     color: var(--color-white);
+    text-shadow: 1px 1px 2px var(--color-white);
   }
 }

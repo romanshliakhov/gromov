@@ -2,6 +2,7 @@ import './components/modals.js';
 import './components/counter.js';
 import './components/replaceEl.js';
 import './components/burger.js';
+import './components/animation.js';
 
 // import './components/accordions.js';
 // import './components/sliders.js';
@@ -10,7 +11,7 @@ import './components/burger.js';
 // import './components/spollers.js';
 // import './components/tabs.js';
 // import './components/parallax.js';
-// import './components/animation.js';
+
 // import './components/multiplays.js';
 // import './components/phoneMask.js';
 // import './components/search.js';

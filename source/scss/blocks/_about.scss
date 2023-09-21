@@ -16,6 +16,7 @@
     background-repeat: no-repeat;
     background-size: 100% 100%;
     background-position: right;
+    background-attachment: fixed;
     z-index: -1;
   }
 
@@ -30,6 +31,7 @@
     position: absolute;
     inset: 0;
     display: flex;
+    background-attachment: fixed;
 
     picture,
     img {
@@ -135,6 +137,11 @@
     font-size: 18px;
     line-height: 22px;
     font-weight: 500;
+    transition: 0.4s ease-in-out;
+
+    &:hover {
+      transform: scale(1.1);
+    }
   }
 
   &__counter {
@@ -172,6 +179,23 @@
   &__item {
     position: relative;
     padding: clamp(30px, 2.083vw, 40px);
+    border-radius: 22px;
+    transition: 0.4s ease;
+    transition-duration: 0.4s;
+    overflow: hidden;
+
+    &:hover {
+      picture,
+      img {
+        transform: scale(1.1);
+      }
+
+      a {
+        // text-shadow: 1px 1px 2px var(--color-purple-dark);
+        text-shadow: 2px 2px 3px var(--color-purple-dark), 0 0 1em var(--color-grey), 0 0 0.2em var(--color-grey);
+        // color: var(--color-blue);
+      }
+    }
 
     &:first-child {
       padding: clamp(30px, 2.083vw, 40px) clamp(20px, 1.354vw, 26px);
@@ -232,6 +256,7 @@
   &__item-bg {
     position: absolute;
     inset: 0;
+    overflow: hidden;
 
     picture,
     img {
@@ -239,6 +264,8 @@
       height: 100%;
       object-fit: cover;
       border-radius: 22px;
+      transition: 0.4s ease;
+      transition-duration: 1s;
     }
   }
 
@@ -256,6 +283,7 @@
     font-weight: 600;
     color: var(--color-white);
     letter-spacing: -1.242px;
+    transition: all 0.5s ease-in-out;
   }
 
   &__item-descr {
